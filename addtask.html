@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="addtask.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/addtask.css')}}">
+    <title>Add New Task</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Todo List App [ {{ email }} ]</h1>
+        <div>
+            <a href="/home">Home</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Add New Task</h2>
+        <form action="/add_task1" method="POST">
+
+            <input type="text" name="email" value = "{{email}}" hidden>
+            <label for="name">Task Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter task name" required>
+
+            <label for="task_time">Task Time</label>
+            <input type="time" id="task_time" name="task_time" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter task description"></textarea>
+
+            <input type="submit" value="Add Task">
+        </form>
+
+        <div class="back-link">
+            <a href="/home">← Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
