@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="userhome.css"> -->
+     <link rel="stylesheet" href="{{url_for('static',filename='css/userhome.css')}}">
+    <title>Todo List App</title>
+</head>
+<body>
+    <div class="a">
+        <div><a href="#" class="cta-button">Home</a></div>
+        <div><a href="/login" class="cta-button">Login</a></div>
+        <div><a href="/register" class="cta-button">Sign UP</a></div>
+    </div>
+    <div class="container">
+        <h1>Welcome {{ email }}</h1>
+        <h1>Welcome to Your Todo List App</h1>
+        <p>Organize your tasks easily and efficiently.</p>
+        <form action="/addtask" method="POST">
+            <input type="text" value="{{email}}" name="email" hidden>
+            <input class="cta-button" type="submit" value="Add a Task">
+        </form>
+        <br>
+        <form action="/removetask" method="POST">
+            <input type="text" value="{{email}}" name="email" hidden>
+            <input class="cta-button" type="submit" value="Remove a Task">
+        </form>
+    </div>
+</body>
+</html>

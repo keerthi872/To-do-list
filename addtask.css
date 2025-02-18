@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+}
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+input[type="text"], input[type="time"], textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+textarea {
+    height: 100px;
+}
+input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+.back-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+.back-link a:hover {
+    text-decoration: underline;
+}
+/* Flash Messages */
+.flash-messages {
+    margin-bottom: 20px;
+}
+.alert {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #fff;
+}
+.alert-success {
+    background-color: #28a745;
+}
+.alert-danger {
+    background-color: #dc3545;
+}
